@@ -21,7 +21,8 @@
 		"@angular/common": "2",
 
 		"leaflet": "1.0",
-		"leaflet-draw": "0.4"
+		"leaflet-draw": "0.4",
+		"@asymmetrik/leaflet-filter": "1.0"
 	},
 
 	"devDependencies": {

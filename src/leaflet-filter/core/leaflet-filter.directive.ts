@@ -1,9 +1,9 @@
 import { Directive, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange } from '@angular/core';
 
 import * as L from 'leaflet';
+import '@asymmetrik/leaflet-filter';
 
 import { LeafletDirective } from '@asymmetrik/angular2-leaflet';
-import EventHandlerFn = L.EventHandlerFn;
 
 
 @Directive({

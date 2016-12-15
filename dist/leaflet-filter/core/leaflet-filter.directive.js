@@ -1,6 +1,7 @@
 "use strict";
 var core_1 = require('@angular/core');
 var L = require('leaflet');
+require('@asymmetrik/leaflet-filter');
 var angular2_leaflet_1 = require('@asymmetrik/angular2-leaflet');
 var LeafletFilterDirective = (function () {
     function LeafletFilterDirective(leafletDirective) {

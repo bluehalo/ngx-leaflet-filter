@@ -5,10 +5,8 @@
 	(factory());
 }(this, (function () { 'use strict';
 
-var leaflet_module_1 = require('./leaflet/leaflet.module');
-exports.LeafletModule = leaflet_module_1.LeafletModule;
-var leaflet_directive_1 = require('./leaflet/core/leaflet.directive');
-exports.LeafletDirective = leaflet_directive_1.LeafletDirective;
+var leaflet_filter_module_1 = require('./leaflet-filter/leaflet-filter.module');
+exports.LeafletFilterModule = leaflet_filter_module_1.LeafletFilterModule;
 
 })));
 //# sourceMappingURL=angular2-leaflet-filter.js.map

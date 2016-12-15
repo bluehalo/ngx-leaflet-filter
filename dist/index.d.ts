@@ -1,2 +1,1 @@
-export { LeafletModule } from './leaflet/leaflet.module';
-export { LeafletDirective } from './leaflet/core/leaflet.directive';
+export { LeafletFilterModule } from './leaflet-filter/leaflet-filter.module';
