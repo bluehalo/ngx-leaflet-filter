@@ -16,12 +16,18 @@ export class LeafletFilterDirective
 
 	// Reference to the primary map object
 	map: L.Map;
+
+	// Filter Control
 	filterControl: L.Control.FilterControl;
 	featureGroup: L.FeatureGroup;
 
+	// Constructor options for Filter Control
 	@Input('leafletFilterOptions') filterOptions: L.Control.FilterControlOptions = null;
 
+	// Filter state
 	@Input('leafletFilterState') filterState: any;
+
+	// Event Emitter for filter state change events
 	@Output('leafletFilterStateChange') filterStateChange: EventEmitter<any> = new EventEmitter<any>();
 
 
@@ -30,6 +36,8 @@ export class LeafletFilterDirective
 	}
 
 	ngOnInit() {
+
+		// Get the map from the parent directive
 		this.map = this.leafletDirective.getMap();
 
 		// Initialize the draw options (in case they weren't provided)
@@ -48,13 +56,21 @@ export class LeafletFilterDirective
 		this.map.on('filter:filter', (e: any) => {
 			setTimeout(() => { this.filterStateChange.emit(e.geo); });
 		});
+
+		// Set the initial filter state
+		this.filterControl.setFilter(this.filterState);
 	}
 
 	ngOnChanges(changes: { [key: string]: SimpleChange }) {
 
 		// Set the filter state
 		if (changes['filterState']) {
-			this.filterControl.setFilter(changes['filterState'].currentValue);
+
+			// Only want to set the filter if the control exists
+			if(null != this.filterControl) {
+				this.filterControl.setFilter(changes['filterState'].currentValue);
+			}
+
 		}
 
 	}

@@ -9,8 +9,8 @@
 			     leaflet-filter
 			     [leafletFilterOptions]="filterOptions"
 			     [leafletOptions]="options"
-			     [(leafletFilterState)]="timeline.filterState"
-			     (leafletFilterStateChange)="timeline.eventHandler('filterChanged', $event)">
+			     [(leafletFilterState)]="filterState"
+			     (leafletFilterStateChange)="eventHandler('filterChanged', $event)">
 			</div>
 
 		</div>

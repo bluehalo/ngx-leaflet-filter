@@ -25,6 +25,7 @@ import 'zone.js';
 // Global Imports
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'font-awesome/css/font-awesome.css';
 
 // Angular2 Imports
 import '@angular/platform-browser';
@@ -42,13 +43,6 @@ import '@asymmetrik/leaflet-filter';
 import '@asymmetrik/leaflet-filter/dist/leaflet-filter.css';
 
 import '@asymmetrik/angular2-leaflet';
-
-
-
-// This addresses a weird thing with how Leaflet handles icon URLs. See README for details.
-import 'leaflet/dist/images/marker-shadow.png';
-import 'leaflet/dist/images/marker-icon.png';
-
 
 // Other Dependencies
 import 'rxjs';
