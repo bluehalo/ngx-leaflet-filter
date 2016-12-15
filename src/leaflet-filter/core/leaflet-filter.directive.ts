@@ -67,7 +67,7 @@ export class LeafletFilterDirective
 		if (changes['filterState']) {
 
 			// Only want to set the filter if the control exists
-			if(null != this.filterControl) {
+			if (null != this.filterControl) {
 				this.filterControl.setFilter(changes['filterState'].currentValue);
 			}
 

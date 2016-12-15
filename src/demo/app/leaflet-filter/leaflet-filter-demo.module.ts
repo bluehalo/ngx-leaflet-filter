@@ -8,6 +8,7 @@ import { LeafletFilterModule } from '../../../leaflet-filter/leaflet-filter.modu
 
 import { LeafletFilterDemoComponent } from './leaflet-filter-demo.component';
 import { LeafletFilterCoreDemoComponent } from './core/core-demo.component';
+import { LeafletFilterProgrammaticDemoComponent } from './programmatic/programmatic-demo.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LeafletFilterCoreDemoComponent } from './core/core-demo.component';
 	],
 	declarations: [
 		LeafletFilterDemoComponent,
-		LeafletFilterCoreDemoComponent
+		LeafletFilterCoreDemoComponent,
+		LeafletFilterProgrammaticDemoComponent
 	],
 	exports: [
 		LeafletFilterDemoComponent

@@ -5,12 +5,15 @@ require('@asymmetrik/leaflet-filter');
 var angular2_leaflet_1 = require('@asymmetrik/angular2-leaflet');
 var LeafletFilterDirective = (function () {
     function LeafletFilterDirective(leafletDirective) {
+        // Constructor options for Filter Control
         this.filterOptions = null;
+        // Event Emitter for filter state change events
         this.filterStateChange = new core_1.EventEmitter();
         this.leafletDirective = leafletDirective;
     }
     LeafletFilterDirective.prototype.ngOnInit = function () {
         var _this = this;
+        // Get the map from the parent directive
         this.map = this.leafletDirective.getMap();
         // Initialize the draw options (in case they weren't provided)
         this.filterOptions = this.initializeFilterOptions(this.filterOptions);
@@ -24,11 +27,16 @@ var LeafletFilterDirective = (function () {
         this.map.on('filter:filter', function (e) {
             setTimeout(function () { _this.filterStateChange.emit(e.geo); });
         });
+        // Set the initial filter state
+        this.filterControl.setFilter(this.filterState);
     };
     LeafletFilterDirective.prototype.ngOnChanges = function (changes) {
         // Set the filter state
         if (changes['filterState']) {
-            this.filterControl.setFilter(changes['filterState'].currentValue);
+            // Only want to set the filter if the control exists
+            if (null != this.filterControl) {
+                this.filterControl.setFilter(changes['filterState'].currentValue);
+            }
         }
     };
     LeafletFilterDirective.prototype.initializeFilterOptions = function (options) {
