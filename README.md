@@ -1,9 +1,9 @@
-# @asymmetrik/angular2-leaflet
+# @asymmetrik/angular2-leaflet-filter
 
 [![Build Status][travis-image]][travis-url]
 
-> Leaflet packages for Angular 2
-> Provides flexible and extensible components for integrating Leaflet v0.7.x and v1.0.x into Angular 2 projects.
+> Leaflet Filter package for Angular 2
+> Provides Angular 2 integration with the Filter plugin for Leaflet
 
 ## Table of Contents
 - [Install](#install)
@@ -11,12 +11,13 @@
 - [API](#api)
 - [Contribute](#contribute)
 - [License](#license)
+- [Credits](#credits)
 
 
 ## Install 
 Install the package via npm:
 ```
-npm install @asymmetrik/angular2-leaflet
+npm install @asymmetrik/angular2-leaflet-filter
 ```
 
 ## Usage
@@ -35,5 +36,5 @@ PRs accepted. If you are part of Asymmetrik, please make contributions on featur
 ## License
 See LICENSE in repository for details.
 
-[travis-url]: https://travis-ci.org/Asymmetrik/angular2-leaflet/
-[travis-image]: https://travis-ci.org/Asymmetrik/angular2-leaflet.svg
+[travis-url]: https://travis-ci.org/Asymmetrik/angular2-leaflet-filter/
+[travis-image]: https://travis-ci.org/Asymmetrik/angular2-leaflet-filter.svg
