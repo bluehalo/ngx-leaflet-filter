@@ -15,12 +15,21 @@
 
 
 ## Install 
-Install the package via npm:
+Install the package and its peer dependencies via npm:
 ```
+npm install font-awesome
+npm install leaflet
+npm install leaflet-draw
+npm install @asymmetrik/angular2-leaflet
 npm install @asymmetrik/angular2-leaflet-filter
 ```
 
+If you want to run the demo, clone the repository, perform an ```npm install```, ```gulp dev``` and then go to http://localhost:9000/src/demo/index.html
+
+
 ## Usage
+This component extends the [Angular 2 Leaflet component](https://github.com/Asymmetrik/angular2-leaflet) by adding directives for activating and configuring the [Filter plugin for Leaflet](https://github.com/Asymmetrik/leaflet-filter).
+
 Use the ```leaflet-filter``` attribute directive in conjunction with the ```leaflet``` attribute directive to activate a map and enable the filter control.
 
 ```html
@@ -101,6 +110,9 @@ var options = {
 };
 ``` 
 
+### leafletFilterState
+Binds the current filter state. Can be one of a circle, rectangle, polygon, or null if there is no active filter.
+
 
 ## Contribute
 PRs accepted. If you are part of Asymmetrik, please make contributions on feature branches off of the ```develop``` branch. If you are outside of Asymmetrik, please fork our repo to make contributions.
@@ -108,6 +120,12 @@ PRs accepted. If you are part of Asymmetrik, please make contributions on featur
 
 ## License
 See LICENSE in repository for details.
+
+## Credits
+**[Leaflet](http://leafletjs.com/)** Is an awesome mapping package.
+**[Leaflet Draw](https://github.com/Leaflet/Leaflet.draw)** Is an awesome extension to Leaflet that lets you draw shapes all over your maps.
+
+
 
 [travis-url]: https://travis-ci.org/Asymmetrik/angular2-leaflet-filter/
 [travis-image]: https://travis-ci.org/Asymmetrik/angular2-leaflet-filter.svg
