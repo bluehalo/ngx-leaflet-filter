@@ -9,12 +9,11 @@ var LeafletFilterDirective = (function () {
         this.filterOptions = null;
         // Event Emitter for filter state change events
         this.filterStateChange = new core_1.EventEmitter();
-        this.leafletDirective = leafletDirective;
+        this.leafletDirective = new angular2_leaflet_1.LeafletDirectiveWrapper(leafletDirective);
     }
     LeafletFilterDirective.prototype.ngOnInit = function () {
         var _this = this;
-        // Get the map from the parent directive
-        this.map = this.leafletDirective.getMap();
+        this.leafletDirective.init();
         // Initialize the draw options (in case they weren't provided)
         this.filterOptions = this.initializeFilterOptions(this.filterOptions);
         // Create the control
@@ -22,9 +21,9 @@ var LeafletFilterDirective = (function () {
         // Pull out the feature group for convenience
         this.featureGroup = this.filterOptions.featureGroup;
         // Add the control to the map
-        this.filterControl.addTo(this.map);
+        this.filterControl.addTo(this.leafletDirective.getMap());
         // Register the main handler for events coming from the draw plugin
-        this.map.on('filter:filter', function (e) {
+        this.leafletDirective.getMap().on('filter:filter', function (e) {
             setTimeout(function () { _this.filterStateChange.emit(e.geo); });
         });
         // Set the initial filter state
@@ -49,7 +48,7 @@ var LeafletFilterDirective = (function () {
         if (null == options.featureGroup) {
             // No feature group was provided, so we're going to add it ourselves
             options.featureGroup = L.featureGroup();
-            this.map.addLayer(options.featureGroup);
+            this.leafletDirective.getMap().addLayer(options.featureGroup);
         }
         return options;
     };
