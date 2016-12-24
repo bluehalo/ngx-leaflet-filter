@@ -2,10 +2,9 @@
 import { EventEmitter, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import * as L from 'leaflet';
 import '@asymmetrik/leaflet-filter';
-import { LeafletDirective } from '@asymmetrik/angular2-leaflet';
+import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/angular2-leaflet';
 export declare class LeafletFilterDirective implements OnChanges, OnInit {
-    leafletDirective: LeafletDirective;
-    map: L.Map;
+    leafletDirective: LeafletDirectiveWrapper;
     filterControl: L.Control.FilterControl;
     featureGroup: L.FeatureGroup;
     filterOptions: L.Control.FilterControlOptions;
