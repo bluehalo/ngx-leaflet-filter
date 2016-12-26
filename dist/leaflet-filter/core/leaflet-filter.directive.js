@@ -66,7 +66,7 @@ var LeafletFilterDirective = (function () {
     ], LeafletFilterDirective.prototype, "filterStateChange", void 0);
     LeafletFilterDirective = __decorate([
         core_1.Directive({
-            selector: '[leaflet-filter]'
+            selector: '[leafletFilter]'
         }), 
         __metadata('design:paramtypes', [angular2_leaflet_1.LeafletDirective])
     ], LeafletFilterDirective);

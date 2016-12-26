@@ -34,7 +34,7 @@ Use the ```leaflet-filter``` attribute directive in conjunction with the ```leaf
 
 ```html
 <div leaflet style="height: 400px;"
-     leaflet-filter
+     leafletFilter
      [leafletOptions]="options"
      [leafletFilterOptions]="filterOptions"
      [(leafletFilterState)]="filterState"
@@ -43,7 +43,7 @@ Use the ```leaflet-filter``` attribute directive in conjunction with the ```leaf
 
 ## API
 
-### leaflet-filter
+### leafletFilter
 Attribute directive that activates the Leaflet filter plugin.
 
 ### leafletFilterOptions
@@ -53,7 +53,7 @@ The Filter Control options extend the standard control options.
 
 Example:
 ```js
-var options = {
+var filterOptions = {
 	position: 'topright',
 	filter: {
 		rectangle: {},
@@ -92,7 +92,7 @@ If you omit the filter object entirely, all filter types will be enabled by defa
 
 ```js
 // All filter types enabled
-var options = {
+var filterOptions = {
 	position: 'topright'
 };
 ```
@@ -101,7 +101,7 @@ Alternatively, if you only specify a subset of the filter types, only those spec
 
 ```js
 // Only circle and rectangle are enabled
-var options = {
+var filterOptions = {
 	position: 'topright',
 	filter: {
 		circle: {},
