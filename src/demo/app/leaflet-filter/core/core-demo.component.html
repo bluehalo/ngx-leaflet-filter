@@ -6,9 +6,9 @@
 		<div class="col-sm-12">
 
 			<div leaflet style="height: 400px;"
-			     leaflet-filter
-			     [leafletFilterOptions]="filterOptions"
+			     leafletFilter
 			     [leafletOptions]="options"
+			     [leafletFilterOptions]="filterOptions"
 			     [(leafletFilterState)]="filterState"
 			     (leafletFilterStateChange)="eventHandler('filterChanged', $event)">
 			</div>

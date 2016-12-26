@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
-	selector: 'leaflet-filter-programmatic-demo',
+	selector: 'leafletFilterProgrammaticDemo',
 	templateUrl: './programmatic-demo.component.html'
 })
 export class LeafletFilterProgrammaticDemoComponent {
@@ -17,8 +17,6 @@ export class LeafletFilterProgrammaticDemoComponent {
 		zoom: 8,
 		center: L.latLng({ lat: this.center[0], lng: this.center[1] })
 	};
-
-	featureGroup = L.featureGroup();
 
 	filterOptions = {
 		position: 'topright',

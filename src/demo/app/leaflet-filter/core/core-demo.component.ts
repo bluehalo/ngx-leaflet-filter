@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
-	selector: 'leaflet-filter-core-demo',
+	selector: 'leafletFilterCoreDemo',
 	templateUrl: './core-demo.component.html'
 })
 export class LeafletFilterCoreDemoComponent {

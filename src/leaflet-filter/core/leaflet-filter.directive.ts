@@ -7,7 +7,7 @@ import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/angular2-
 
 
 @Directive({
-	selector: '[leaflet-filter]'
+	selector: '[leafletFilter]'
 })
 export class LeafletFilterDirective
 	implements OnChanges, OnInit {

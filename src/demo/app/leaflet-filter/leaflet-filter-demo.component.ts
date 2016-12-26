@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'leaflet-filter-demo',
+	selector: 'leafletFilterDemo',
 	templateUrl: './leaflet-filter-demo.component.html'
 })
 export class LeafletFilterDemoComponent {
