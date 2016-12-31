@@ -9,6 +9,8 @@ var LeafletFilterDirective = (function () {
         this.filterOptions = null;
         // Event Emitter for filter state change events
         this.filterStateChange = new core_1.EventEmitter();
+        // Event for when the filter control is created and ready
+        this.controlReady = new core_1.EventEmitter();
         this.leafletDirective = new angular2_leaflet_1.LeafletDirectiveWrapper(leafletDirective);
     }
     LeafletFilterDirective.prototype.ngOnInit = function () {
@@ -28,6 +30,8 @@ var LeafletFilterDirective = (function () {
         });
         // Set the initial filter state
         this.filterControl.setFilter(this.filterState);
+        // Fire control ready event
+        this.controlReady.emit(this.filterControl);
     };
     LeafletFilterDirective.prototype.ngOnChanges = function (changes) {
         // Set the filter state
@@ -62,8 +66,12 @@ var LeafletFilterDirective = (function () {
     ], LeafletFilterDirective.prototype, "filterState", void 0);
     __decorate([
         core_1.Output('leafletFilterStateChange'), 
-        __metadata('design:type', core_1.EventEmitter)
+        __metadata('design:type', Object)
     ], LeafletFilterDirective.prototype, "filterStateChange", void 0);
+    __decorate([
+        core_1.Output('leafletFilterControlReady'), 
+        __metadata('design:type', Object)
+    ], LeafletFilterDirective.prototype, "controlReady", void 0);
     LeafletFilterDirective = __decorate([
         core_1.Directive({
             selector: '[leafletFilter]'
