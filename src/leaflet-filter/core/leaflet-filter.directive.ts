@@ -27,6 +27,8 @@ export class LeafletFilterDirective
 	// Event Emitter for filter state change events
 	@Output('leafletFilterStateChange') filterStateChange: EventEmitter<any> = new EventEmitter<any>();
 
+	// Event for when the filter control is created and ready
+	@Output('leafletFilterControlReady') controlReady = new EventEmitter<L.Control.FilterControl>();
 
 	constructor(leafletDirective: LeafletDirective) {
 		this.leafletDirective = new LeafletDirectiveWrapper(leafletDirective);
@@ -55,6 +57,9 @@ export class LeafletFilterDirective
 
 		// Set the initial filter state
 		this.filterControl.setFilter(this.filterState);
+
+		// Fire map ready event
+		this.controlReady.emit(this.filterControl);
 	}
 
 	ngOnChanges(changes: { [key: string]: SimpleChange }) {
