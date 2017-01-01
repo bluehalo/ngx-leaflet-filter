@@ -28,7 +28,7 @@ export class LeafletFilterDirective
 	@Output('leafletFilterStateChange') filterStateChange = new EventEmitter<any>();
 
 	// Event for when the filter control is created and ready
-	@Output('leafletFilterControlReady') controlReady = new EventEmitter<L.FilterControl>();
+	@Output('leafletFilterControlReady') controlReady = new EventEmitter<L.Control.FilterControl>();
 
 	constructor(leafletDirective: LeafletDirective) {
 		this.leafletDirective = new LeafletDirectiveWrapper(leafletDirective);

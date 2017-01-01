@@ -10,7 +10,7 @@ export declare class LeafletFilterDirective implements OnChanges, OnInit {
     filterOptions: L.Control.FilterControlOptions;
     filterState: any;
     filterStateChange: EventEmitter<any>;
-    controlReady: EventEmitter<any>;
+    controlReady: EventEmitter<L.Control.FilterControl>;
     constructor(leafletDirective: LeafletDirective);
     ngOnInit(): void;
     ngOnChanges(changes: {
