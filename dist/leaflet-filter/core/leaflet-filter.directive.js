@@ -30,7 +30,7 @@ var LeafletFilterDirective = (function () {
         });
         // Set the initial filter state
         this.filterControl.setFilter(this.filterState);
-        // Fire map ready event
+        // Fire control ready event
         this.controlReady.emit(this.filterControl);
     };
     LeafletFilterDirective.prototype.ngOnChanges = function (changes) {
@@ -66,7 +66,7 @@ var LeafletFilterDirective = (function () {
     ], LeafletFilterDirective.prototype, "filterState", void 0);
     __decorate([
         core_1.Output('leafletFilterStateChange'), 
-        __metadata('design:type', core_1.EventEmitter)
+        __metadata('design:type', Object)
     ], LeafletFilterDirective.prototype, "filterStateChange", void 0);
     __decorate([
         core_1.Output('leafletFilterControlReady'), 
