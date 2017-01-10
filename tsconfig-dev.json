@@ -19,5 +19,4 @@
 		"src/**/*",
 		"node_modules/@asymmetrik/leaflet-filter/index.d.ts"
 	]
-
 }
