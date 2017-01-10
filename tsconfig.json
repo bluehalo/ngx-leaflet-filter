@@ -16,8 +16,8 @@
 		"sourceMap": true
 	},
 
-	"exclude": [
-		"node_modules",
-		"dist"
+	"files": [
+		"src/**/*",
+		"node_modules/@asymmetrik/leaflet-filter/index.d.ts"
 	]
 }
