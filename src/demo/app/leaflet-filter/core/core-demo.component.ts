@@ -29,10 +29,9 @@ export class LeafletFilterCoreDemoComponent {
 
 	filterState: any;
 
-	constructor() {	}
-
 	eventHandler = (msg: string, event: any) => {
-		console.log({ msg: msg, event: event });
-	};
+		// tslint:disable-next-line:no-console
+		console.log({ msg, event });
+	}
 
 }
