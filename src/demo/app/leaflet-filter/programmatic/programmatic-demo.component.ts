@@ -29,8 +29,6 @@ export class LeafletFilterProgrammaticDemoComponent {
 
 	filterState: any;
 
-	constructor() { }
-
 	createFilter() {
 		let filterState: any = null;
 
@@ -83,7 +81,8 @@ export class LeafletFilterProgrammaticDemoComponent {
 	}
 
 	eventHandler = (msg: string, event: any) => {
-		console.log({ msg: msg, event: event });
-	};
+		// tslint:disable-next-line:no-console
+		console.log({ msg, event });
+	}
 
 }

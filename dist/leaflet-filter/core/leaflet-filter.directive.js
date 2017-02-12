@@ -1,17 +1,16 @@
-"use strict";
-var core_1 = require('@angular/core');
-var L = require('leaflet');
-require('@asymmetrik/leaflet-filter');
-var angular2_leaflet_1 = require('@asymmetrik/angular2-leaflet');
+import { Directive, EventEmitter, Input, Output } from '@angular/core';
+import * as L from 'leaflet';
+import '@asymmetrik/leaflet-filter';
+import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/angular2-leaflet';
 var LeafletFilterDirective = (function () {
     function LeafletFilterDirective(leafletDirective) {
         // Constructor options for Filter Control
         this.filterOptions = null;
         // Event Emitter for filter state change events
-        this.filterStateChange = new core_1.EventEmitter();
+        this.filterStateChange = new EventEmitter();
         // Event for when the filter control is created and ready
-        this.controlReady = new core_1.EventEmitter();
-        this.leafletDirective = new angular2_leaflet_1.LeafletDirectiveWrapper(leafletDirective);
+        this.controlReady = new EventEmitter();
+        this.leafletDirective = new LeafletDirectiveWrapper(leafletDirective);
     }
     LeafletFilterDirective.prototype.ngOnInit = function () {
         var _this = this;
@@ -56,30 +55,30 @@ var LeafletFilterDirective = (function () {
         }
         return options;
     };
-    __decorate([
-        core_1.Input('leafletFilterOptions'), 
-        __metadata('design:type', Object)
-    ], LeafletFilterDirective.prototype, "filterOptions", void 0);
-    __decorate([
-        core_1.Input('leafletFilterState'), 
-        __metadata('design:type', Object)
-    ], LeafletFilterDirective.prototype, "filterState", void 0);
-    __decorate([
-        core_1.Output('leafletFilterStateChange'), 
-        __metadata('design:type', Object)
-    ], LeafletFilterDirective.prototype, "filterStateChange", void 0);
-    __decorate([
-        core_1.Output('leafletFilterControlReady'), 
-        __metadata('design:type', Object)
-    ], LeafletFilterDirective.prototype, "controlReady", void 0);
-    LeafletFilterDirective = __decorate([
-        core_1.Directive({
-            selector: '[leafletFilter]'
-        }), 
-        __metadata('design:paramtypes', [angular2_leaflet_1.LeafletDirective])
-    ], LeafletFilterDirective);
     return LeafletFilterDirective;
 }());
-exports.LeafletFilterDirective = LeafletFilterDirective;
+__decorate([
+    Input('leafletFilterOptions'),
+    __metadata("design:type", Object)
+], LeafletFilterDirective.prototype, "filterOptions", void 0);
+__decorate([
+    Input('leafletFilterState'),
+    __metadata("design:type", Object)
+], LeafletFilterDirective.prototype, "filterState", void 0);
+__decorate([
+    Output('leafletFilterStateChange'),
+    __metadata("design:type", Object)
+], LeafletFilterDirective.prototype, "filterStateChange", void 0);
+__decorate([
+    Output('leafletFilterControlReady'),
+    __metadata("design:type", Object)
+], LeafletFilterDirective.prototype, "controlReady", void 0);
+LeafletFilterDirective = __decorate([
+    Directive({
+        selector: '[leafletFilter]'
+    }),
+    __metadata("design:paramtypes", [LeafletDirective])
+], LeafletFilterDirective);
+export { LeafletFilterDirective };
 
 //# sourceMappingURL=leaflet-filter.directive.js.map

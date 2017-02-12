@@ -1,23 +1,28 @@
 {
 	"compilerOptions": {
 		"target": "es5",
+		"module": "es6",
 
-		"module": "commonjs",
 		"moduleResolution": "node",
 
+		"declaration": true,
+		"noEmitHelpers": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"noEmitHelpers": true,
+
+		"lib": [ "es5", "dom" ],
 
 		"noImplicitAny": true,
 		"suppressImplicitAnyIndexErrors": true,
 
-		"declaration": true,
+		"allowUnreachableCode": false,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+
 		"sourceMap": true
 	},
 
-	"files": [
-		"src/**/*",
-		"node_modules/@asymmetrik/leaflet-filter/index.d.ts"
+	"exclude": [
+		"node_modules"
 	]
 }
