@@ -20,18 +20,20 @@
 // Polyfills
 import 'core-js/es6';
 import 'core-js/es7/reflect';
-import 'ts-helpers';
+
 
 // Global Imports
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'font-awesome/css/font-awesome.css';
 
+
 // Angular2 Imports
 import '@angular/common';
 import '@angular/core';
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
+
 
 // Angular2 Third-Party
 import 'leaflet';
@@ -43,6 +45,7 @@ import '@asymmetrik/leaflet-filter';
 import '@asymmetrik/leaflet-filter/dist/leaflet-filter.css';
 
 import '@asymmetrik/angular2-leaflet';
+
 
 // Other Dependencies
 import 'rxjs';
