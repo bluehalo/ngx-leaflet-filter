@@ -89,5 +89,4 @@ LeafletFilterDirective = __decorate([
     __metadata("design:paramtypes", [LeafletDirective])
 ], LeafletFilterDirective);
 export { LeafletFilterDirective };
-
 //# sourceMappingURL=leaflet-filter.directive.js.map

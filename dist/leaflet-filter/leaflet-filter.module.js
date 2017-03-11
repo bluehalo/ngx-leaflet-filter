@@ -6,23 +6,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { NgModule } from '@angular/core';
 import { LeafletFilterDirective } from './core/leaflet-filter.directive';
-var LeafletFilterModule = (function () {
+var LeafletFilterModule = LeafletFilterModule_1 = (function () {
     function LeafletFilterModule() {
     }
+    LeafletFilterModule.forRoot = function () {
+        return { ngModule: LeafletFilterModule_1, providers: [] };
+    };
     return LeafletFilterModule;
 }());
-LeafletFilterModule = __decorate([
+LeafletFilterModule = LeafletFilterModule_1 = __decorate([
     NgModule({
-        imports: [],
         exports: [
             LeafletFilterDirective
         ],
         declarations: [
             LeafletFilterDirective
-        ],
-        providers: []
+        ]
     })
 ], LeafletFilterModule);
 export { LeafletFilterModule };
-
+var LeafletFilterModule_1;
 //# sourceMappingURL=leaflet-filter.module.js.map
