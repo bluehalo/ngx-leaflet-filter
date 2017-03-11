@@ -1,16 +1,19 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { LeafletFilterDirective } from './core/leaflet-filter.directive';
 
 @NgModule({
-	imports: [],
 	exports: [
 		LeafletFilterDirective
 	],
 	declarations: [
 		LeafletFilterDirective
-	],
-	providers: [
 	]
 })
-export class LeafletFilterModule { }
+export class LeafletFilterModule {
+
+	static forRoot(): ModuleWithProviders {
+		return { ngModule: LeafletFilterModule, providers: [] };
+	}
+
+}
