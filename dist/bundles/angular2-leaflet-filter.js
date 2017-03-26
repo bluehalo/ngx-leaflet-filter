@@ -1,19 +1,10 @@
-/*! @asymmetrik/angular2-leaflet-filter-1.2.0 - Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved.*/
+/*! @asymmetrik/angular2-leaflet-filter-2.0.0 - Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved.*/
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('leaflet'), require('@asymmetrik/leaflet-filter'), require('@asymmetrik/angular2-leaflet')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'leaflet', '@asymmetrik/leaflet-filter', '@asymmetrik/angular2-leaflet'], factory) :
 	(factory((global.angular2LeafletFilter = global.angular2LeafletFilter || {}),global.ng.core,global.L,null,global.angular2Leaflet));
 }(this, (function (exports,_angular_core,L,_asymmetrik_leafletFilter,_asymmetrik_angular2Leaflet) { 'use strict';
 
-var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var LeafletFilterDirective = (function () {
     function LeafletFilterDirective(leafletDirective) {
         // Constructor options for Filter Control
@@ -69,54 +60,44 @@ var LeafletFilterDirective = (function () {
     };
     return LeafletFilterDirective;
 }());
-__decorate$1([
-    _angular_core.Input('leafletFilterOptions'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "filterOptions", void 0);
-__decorate$1([
-    _angular_core.Input('leafletFilterState'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "filterState", void 0);
-__decorate$1([
-    _angular_core.Output('leafletFilterStateChange'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "filterStateChange", void 0);
-__decorate$1([
-    _angular_core.Output('leafletFilterControlReady'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "controlReady", void 0);
-LeafletFilterDirective = __decorate$1([
-    _angular_core.Directive({
-        selector: '[leafletFilter]'
-    }),
-    __metadata("design:paramtypes", [_asymmetrik_angular2Leaflet.LeafletDirective])
-], LeafletFilterDirective);
-
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+LeafletFilterDirective.decorators = [
+    { type: _angular_core.Directive, args: [{
+                selector: '[leafletFilter]'
+            },] },
+];
+/** @nocollapse */
+LeafletFilterDirective.ctorParameters = function () { return [
+    { type: _asymmetrik_angular2Leaflet.LeafletDirective, },
+]; };
+LeafletFilterDirective.propDecorators = {
+    'filterOptions': [{ type: _angular_core.Input, args: ['leafletFilterOptions',] },],
+    'filterState': [{ type: _angular_core.Input, args: ['leafletFilterState',] },],
+    'filterStateChange': [{ type: _angular_core.Output, args: ['leafletFilterStateChange',] },],
+    'controlReady': [{ type: _angular_core.Output, args: ['leafletFilterControlReady',] },],
 };
-exports.LeafletFilterModule = LeafletFilterModule_1 = (function () {
+
+var LeafletFilterModule = (function () {
     function LeafletFilterModule() {
     }
     LeafletFilterModule.forRoot = function () {
-        return { ngModule: LeafletFilterModule_1, providers: [] };
+        return { ngModule: LeafletFilterModule, providers: [] };
     };
     return LeafletFilterModule;
 }());
-exports.LeafletFilterModule = LeafletFilterModule_1 = __decorate([
-    _angular_core.NgModule({
-        exports: [
-            LeafletFilterDirective
-        ],
-        declarations: [
-            LeafletFilterDirective
-        ]
-    })
-], exports.LeafletFilterModule);
-var LeafletFilterModule_1;
+LeafletFilterModule.decorators = [
+    { type: _angular_core.NgModule, args: [{
+                exports: [
+                    LeafletFilterDirective
+                ],
+                declarations: [
+                    LeafletFilterDirective
+                ]
+            },] },
+];
+/** @nocollapse */
+LeafletFilterModule.ctorParameters = function () { return []; };
+
+exports.LeafletFilterModule = LeafletFilterModule;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

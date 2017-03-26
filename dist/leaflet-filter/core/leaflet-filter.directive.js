@@ -1,12 +1,3 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 import { Directive, EventEmitter, Input, Output } from '@angular/core';
 import * as L from 'leaflet';
 import '@asymmetrik/leaflet-filter';
@@ -66,27 +57,20 @@ var LeafletFilterDirective = (function () {
     };
     return LeafletFilterDirective;
 }());
-__decorate([
-    Input('leafletFilterOptions'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "filterOptions", void 0);
-__decorate([
-    Input('leafletFilterState'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "filterState", void 0);
-__decorate([
-    Output('leafletFilterStateChange'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "filterStateChange", void 0);
-__decorate([
-    Output('leafletFilterControlReady'),
-    __metadata("design:type", Object)
-], LeafletFilterDirective.prototype, "controlReady", void 0);
-LeafletFilterDirective = __decorate([
-    Directive({
-        selector: '[leafletFilter]'
-    }),
-    __metadata("design:paramtypes", [LeafletDirective])
-], LeafletFilterDirective);
 export { LeafletFilterDirective };
+LeafletFilterDirective.decorators = [
+    { type: Directive, args: [{
+                selector: '[leafletFilter]'
+            },] },
+];
+/** @nocollapse */
+LeafletFilterDirective.ctorParameters = function () { return [
+    { type: LeafletDirective, },
+]; };
+LeafletFilterDirective.propDecorators = {
+    'filterOptions': [{ type: Input, args: ['leafletFilterOptions',] },],
+    'filterState': [{ type: Input, args: ['leafletFilterState',] },],
+    'filterStateChange': [{ type: Output, args: ['leafletFilterStateChange',] },],
+    'controlReady': [{ type: Output, args: ['leafletFilterControlReady',] },],
+};
 //# sourceMappingURL=leaflet-filter.directive.js.map
