@@ -2,7 +2,7 @@
 	"name": "@asymmetrik/angular2-leaflet-filter",
 	"artifactName": "angular2-leaflet-filter",
 	"description": "Angular 2 component for the Leaflet Filter plugin",
-	"version": "2.0.0",
+	"version": "2.0.1",
 
 	"author": "Asymmetrik, Ltd.",
 	"copyright": "Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved.",
@@ -24,7 +24,7 @@
 		"leaflet": "1",
 		"leaflet-draw": "0.4",
 
-		"@asymmetrik/angular2-leaflet": "1",
+		"@asymmetrik/angular2-leaflet": "2",
 		"@asymmetrik/leaflet-filter": "1",
 
 		"font-awesome": "4"
