@@ -10,9 +10,9 @@
  *
  *   Global Imports - Dependencies that are not polyfills, but are not directly imported elsewhere in the app
  *
- *   Angular2 Imports - All @angular dependencies
+ *   Angular Imports - All @angular dependencies
  *
- *   Angular2 Third-Party - All angular-specific third-party dependencies
+ *   Angular Third-Party - All angular-specific third-party dependencies
  *
  *   Other Dependencies - All other third-party dependencies
  */
@@ -28,14 +28,14 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'font-awesome/css/font-awesome.css';
 
 
-// Angular2 Imports
+// Angular Imports
 import '@angular/common';
 import '@angular/core';
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
 
 
-// Angular2 Third-Party
+// Angular Third-Party
 import 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -44,7 +44,7 @@ import 'leaflet-draw/dist/leaflet.draw.css';
 import '@asymmetrik/leaflet-filter';
 import '@asymmetrik/leaflet-filter/dist/leaflet-filter.css';
 
-import '@asymmetrik/angular2-leaflet';
+import '@asymmetrik/ngx-leaflet';
 
 
 // Other Dependencies

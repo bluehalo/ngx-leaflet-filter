@@ -1,21 +1,21 @@
 {
-	"name": "@asymmetrik/angular2-leaflet-filter",
-	"artifactName": "angular2-leaflet-filter",
-	"moduleName": "angular2LeafletFilter",
+	"name": "@asymmetrik/ngx-leaflet-filter",
+	"artifactName": "ngx-leaflet-filter",
+	"moduleName": "ngxLeafletFilter",
 	"description": "Angular 2 component for the Leaflet Filter plugin",
-	"version": "2.2.0",
+	"version": "2.3.0",
 
 	"author": "Asymmetrik, Ltd.",
 	"copyright": "Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved.",
 	"license": "MIT",
 
-	"main": "dist/bundles/angular2-leaflet-filter.js",
+	"main": "dist/bundles/ngx-leaflet-filter.js",
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",
 
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Asymmetrik/angular2-leaflet-filter.git"
+		"url": "https://github.com/Asymmetrik/ngx-leaflet-filter.git"
 	},
 
 	"peerDependencies": {
@@ -25,7 +25,7 @@
 		"leaflet": "1",
 		"leaflet-draw": "0.4",
 
-		"@asymmetrik/angular2-leaflet": "2",
+		"@asymmetrik/ngx-leaflet": "2",
 		"@asymmetrik/leaflet-filter": "1",
 
 		"font-awesome": "4"
@@ -43,7 +43,7 @@
 		"bootstrap": "3",
 		"font-awesome": "4",
 
-		"@asymmetrik/angular2-leaflet": "1.2",
+		"@asymmetrik/ngx-leaflet": "2.3",
 		"@asymmetrik/leaflet-filter": "1.0",
 
 		"leaflet": "1.0",

@@ -1,9 +1,9 @@
-/*! @asymmetrik/angular2-leaflet-filter - 2.2.0 - Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved. + */
+/*! @asymmetrik/ngx-leaflet-filter - 2.3.0 - Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved. + */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('leaflet'), require('@asymmetrik/leaflet-filter'), require('@asymmetrik/angular2-leaflet')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'leaflet', '@asymmetrik/leaflet-filter', '@asymmetrik/angular2-leaflet'], factory) :
-	(factory((global.angular2LeafletFilter = global.angular2LeafletFilter || {}),global.ng.core,global.L,null,global.angular2Leaflet));
-}(this, (function (exports,_angular_core,L,_asymmetrik_leafletFilter,_asymmetrik_angular2Leaflet) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('leaflet'), require('@asymmetrik/leaflet-filter'), require('@asymmetrik/ngx-leaflet')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'leaflet', '@asymmetrik/leaflet-filter', '@asymmetrik/ngx-leaflet'], factory) :
+	(factory((global.ngxLeafletFilter = global.ngxLeafletFilter || {}),global.ng.core,global.L,null,global.ngxLeaflet));
+}(this, (function (exports,_angular_core,L,_asymmetrik_leafletFilter,_asymmetrik_ngxLeaflet) { 'use strict';
 
 var LeafletFilterDirective = (function () {
     function LeafletFilterDirective(leafletDirective) {
@@ -13,7 +13,7 @@ var LeafletFilterDirective = (function () {
         this.filterStateChange = new _angular_core.EventEmitter();
         // Event for when the filter control is created and ready
         this.controlReady = new _angular_core.EventEmitter();
-        this.leafletDirective = new _asymmetrik_angular2Leaflet.LeafletDirectiveWrapper(leafletDirective);
+        this.leafletDirective = new _asymmetrik_ngxLeaflet.LeafletDirectiveWrapper(leafletDirective);
     }
     LeafletFilterDirective.prototype.ngOnInit = function () {
         var _this = this;
@@ -67,7 +67,7 @@ LeafletFilterDirective.decorators = [
 ];
 /** @nocollapse */
 LeafletFilterDirective.ctorParameters = function () { return [
-    { type: _asymmetrik_angular2Leaflet.LeafletDirective, },
+    { type: _asymmetrik_ngxLeaflet.LeafletDirective, },
 ]; };
 LeafletFilterDirective.propDecorators = {
     'filterOptions': [{ type: _angular_core.Input, args: ['leafletFilterOptions',] },],
@@ -102,4 +102,4 @@ exports.LeafletFilterModule = LeafletFilterModule;
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=angular2-leaflet-filter.js.map
+//# sourceMappingURL=ngx-leaflet-filter.js.map

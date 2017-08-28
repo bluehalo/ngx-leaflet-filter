@@ -1,9 +1,13 @@
-# @asymmetrik/angular2-leaflet-filter
+# @asymmetrik/ngx-leaflet-filter
 
 [![Build Status][travis-image]][travis-url]
 
-> Leaflet Filter package for Angular 2
-> Provides Angular 2 integration with the Filter plugin for Leaflet
+[travis-url]: https://travis-ci.org/Asymmetrik/ngx-leaflet-filter/
+[travis-image]: https://travis-ci.org/Asymmetrik/ngx-leaflet-filter.svg
+
+
+> Leaflet Filter package for Angular 2+
+> Provides Angular 2+ integration with the Filter plugin for Leaflet
 
 ## Table of Contents
 - [Install](#install)
@@ -20,15 +24,15 @@ Install the package and its peer dependencies via npm:
 npm install font-awesome
 npm install leaflet
 npm install leaflet-draw
-npm install @asymmetrik/angular2-leaflet
-npm install @asymmetrik/angular2-leaflet-filter
+npm install @asymmetrik/ngx-leaflet
+npm install @asymmetrik/ngx-leaflet-filter
 ```
 
 If you want to run the demo, clone the repository, perform an ```npm install```, ```gulp dev``` and then go to http://localhost:9000/src/demo/index.html
 
 
 ## Usage
-This component extends the [Angular 2 Leaflet component](https://github.com/Asymmetrik/angular2-leaflet) by adding directives for activating and configuring the [Filter plugin for Leaflet](https://github.com/Asymmetrik/leaflet-filter).
+This component extends the [Angular 2 Leaflet component](https://github.com/Asymmetrik/ngx-leaflet) by adding directives for activating and configuring the [Filter plugin for Leaflet](https://github.com/Asymmetrik/leaflet-filter).
 
 Use the ```leaflet-filter``` attribute directive in conjunction with the ```leaflet``` attribute directive to activate a map and enable the filter control.
 
@@ -124,8 +128,3 @@ See LICENSE in repository for details.
 ## Credits
 **[Leaflet](http://leafletjs.com/)** Is an awesome mapping package.
 **[Leaflet Draw](https://github.com/Leaflet/Leaflet.draw)** Is an awesome extension to Leaflet that lets you draw shapes all over your maps.
-
-
-
-[travis-url]: https://travis-ci.org/Asymmetrik/angular2-leaflet-filter/
-[travis-image]: https://travis-ci.org/Asymmetrik/angular2-leaflet-filter.svg
