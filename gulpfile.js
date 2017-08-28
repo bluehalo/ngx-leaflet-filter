@@ -94,7 +94,7 @@ gulp.task('rollup-js', () => {
 				'@angular/core',
 				'leaflet',
 				'@asymmetrik/leaflet-filter',
-				'@asymmetrik/angular2-leaflet'
+				'@asymmetrik/ngx-leaflet'
 			],
 			onwarn: (warning) => {
 				if ('THIS_IS_UNDEFINED' === warning.code) {
@@ -112,7 +112,7 @@ gulp.task('rollup-js', () => {
 				banner: bannerString,
 				globals: {
 					'@angular/core': 'ng.core',
-					'@asymmetrik/angular2-leaflet': 'angular2Leaflet',
+					'@asymmetrik/ngx-leaflet': 'ngxLeaflet',
 					'leaflet': 'L'
 				}
 			});

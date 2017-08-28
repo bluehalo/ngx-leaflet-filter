@@ -1,7 +1,7 @@
 import { Directive, EventEmitter, Input, Output } from '@angular/core';
 import * as L from 'leaflet';
 import '@asymmetrik/leaflet-filter';
-import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/angular2-leaflet';
+import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/ngx-leaflet';
 var LeafletFilterDirective = (function () {
     function LeafletFilterDirective(leafletDirective) {
         // Constructor options for Filter Control

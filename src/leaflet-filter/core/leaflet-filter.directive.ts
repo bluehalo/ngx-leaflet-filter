@@ -3,7 +3,7 @@ import { Directive, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 import * as L from 'leaflet';
 import '@asymmetrik/leaflet-filter';
 
-import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/angular2-leaflet';
+import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/ngx-leaflet';
 
 
 @Directive({
