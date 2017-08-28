@@ -2,6 +2,8 @@
 
 [![Build Status][travis-image]][travis-url]
 
+**IMPORTANT NOTE: This package has been renamed to @asymmetrik/ngx-leaflet-filter**
+
 > Leaflet Filter package for Angular 2
 > Provides Angular 2 integration with the Filter plugin for Leaflet
 
