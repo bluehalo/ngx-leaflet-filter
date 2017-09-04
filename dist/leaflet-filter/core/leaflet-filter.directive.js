@@ -2,7 +2,7 @@ import { Directive, EventEmitter, Input, Output } from '@angular/core';
 import * as L from 'leaflet';
 import '@asymmetrik/leaflet-filter';
 import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/ngx-leaflet';
-var LeafletFilterDirective = (function () {
+var LeafletFilterDirective = /** @class */ (function () {
     function LeafletFilterDirective(leafletDirective) {
         // Constructor options for Filter Control
         this.filterOptions = null;
@@ -55,22 +55,22 @@ var LeafletFilterDirective = (function () {
         }
         return options;
     };
+    LeafletFilterDirective.decorators = [
+        { type: Directive, args: [{
+                    selector: '[leafletFilter]'
+                },] },
+    ];
+    /** @nocollapse */
+    LeafletFilterDirective.ctorParameters = function () { return [
+        { type: LeafletDirective, },
+    ]; };
+    LeafletFilterDirective.propDecorators = {
+        'filterOptions': [{ type: Input, args: ['leafletFilterOptions',] },],
+        'filterState': [{ type: Input, args: ['leafletFilterState',] },],
+        'filterStateChange': [{ type: Output, args: ['leafletFilterStateChange',] },],
+        'controlReady': [{ type: Output, args: ['leafletFilterControlReady',] },],
+    };
     return LeafletFilterDirective;
 }());
 export { LeafletFilterDirective };
-LeafletFilterDirective.decorators = [
-    { type: Directive, args: [{
-                selector: '[leafletFilter]'
-            },] },
-];
-/** @nocollapse */
-LeafletFilterDirective.ctorParameters = function () { return [
-    { type: LeafletDirective, },
-]; };
-LeafletFilterDirective.propDecorators = {
-    'filterOptions': [{ type: Input, args: ['leafletFilterOptions',] },],
-    'filterState': [{ type: Input, args: ['leafletFilterState',] },],
-    'filterStateChange': [{ type: Output, args: ['leafletFilterStateChange',] },],
-    'controlReady': [{ type: Output, args: ['leafletFilterControlReady',] },],
-};
 //# sourceMappingURL=leaflet-filter.directive.js.map
