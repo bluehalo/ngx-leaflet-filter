@@ -9,6 +9,7 @@
 > Leaflet Filter package for Angular 2+
 > Provides Angular 2+ integration with the Filter plugin for Leaflet
 
+
 ## Table of Contents
 - [Install](#install)
 - [Usage](#usage)

@@ -32,7 +32,7 @@ export class LeafletFilterProgrammaticDemoComponent {
 	createFilter() {
 		let filterState: any = null;
 
-		let rVal = Math.random();
+		const rVal = Math.random();
 		if (rVal < 0.333) {
 
 			// Create a circle

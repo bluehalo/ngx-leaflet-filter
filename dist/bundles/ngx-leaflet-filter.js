@@ -1,19 +1,19 @@
-/*! @asymmetrik/ngx-leaflet-filter - 2.3.0 - Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved. + */
+/*! @asymmetrik/ngx-leaflet-filter - 2.4.0 - Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved. + */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('leaflet'), require('@asymmetrik/leaflet-filter'), require('@asymmetrik/ngx-leaflet')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'leaflet', '@asymmetrik/leaflet-filter', '@asymmetrik/ngx-leaflet'], factory) :
-	(factory((global.ngxLeafletFilter = global.ngxLeafletFilter || {}),global.ng.core,global.L,null,global.ngxLeaflet));
-}(this, (function (exports,_angular_core,L,_asymmetrik_leafletFilter,_asymmetrik_ngxLeaflet) { 'use strict';
+	(factory((global.ngxLeafletFilter = {}),global.ng.core,global.L,null,global.ngxLeaflet));
+}(this, (function (exports,core,L,leafletFilter,ngxLeaflet) { 'use strict';
 
-var LeafletFilterDirective = (function () {
+var LeafletFilterDirective = /** @class */ (function () {
     function LeafletFilterDirective(leafletDirective) {
         // Constructor options for Filter Control
         this.filterOptions = null;
         // Event Emitter for filter state change events
-        this.filterStateChange = new _angular_core.EventEmitter();
+        this.filterStateChange = new core.EventEmitter();
         // Event for when the filter control is created and ready
-        this.controlReady = new _angular_core.EventEmitter();
-        this.leafletDirective = new _asymmetrik_ngxLeaflet.LeafletDirectiveWrapper(leafletDirective);
+        this.controlReady = new core.EventEmitter();
+        this.leafletDirective = new ngxLeaflet.LeafletDirectiveWrapper(leafletDirective);
     }
     LeafletFilterDirective.prototype.ngOnInit = function () {
         var _this = this;
@@ -58,44 +58,44 @@ var LeafletFilterDirective = (function () {
         }
         return options;
     };
+    LeafletFilterDirective.decorators = [
+        { type: core.Directive, args: [{
+                    selector: '[leafletFilter]'
+                },] },
+    ];
+    /** @nocollapse */
+    LeafletFilterDirective.ctorParameters = function () { return [
+        { type: ngxLeaflet.LeafletDirective, },
+    ]; };
+    LeafletFilterDirective.propDecorators = {
+        'filterOptions': [{ type: core.Input, args: ['leafletFilterOptions',] },],
+        'filterState': [{ type: core.Input, args: ['leafletFilterState',] },],
+        'filterStateChange': [{ type: core.Output, args: ['leafletFilterStateChange',] },],
+        'controlReady': [{ type: core.Output, args: ['leafletFilterControlReady',] },],
+    };
     return LeafletFilterDirective;
 }());
-LeafletFilterDirective.decorators = [
-    { type: _angular_core.Directive, args: [{
-                selector: '[leafletFilter]'
-            },] },
-];
-/** @nocollapse */
-LeafletFilterDirective.ctorParameters = function () { return [
-    { type: _asymmetrik_ngxLeaflet.LeafletDirective, },
-]; };
-LeafletFilterDirective.propDecorators = {
-    'filterOptions': [{ type: _angular_core.Input, args: ['leafletFilterOptions',] },],
-    'filterState': [{ type: _angular_core.Input, args: ['leafletFilterState',] },],
-    'filterStateChange': [{ type: _angular_core.Output, args: ['leafletFilterStateChange',] },],
-    'controlReady': [{ type: _angular_core.Output, args: ['leafletFilterControlReady',] },],
-};
 
-var LeafletFilterModule = (function () {
+var LeafletFilterModule = /** @class */ (function () {
     function LeafletFilterModule() {
     }
     LeafletFilterModule.forRoot = function () {
         return { ngModule: LeafletFilterModule, providers: [] };
     };
+    LeafletFilterModule.decorators = [
+        { type: core.NgModule, args: [{
+                    exports: [
+                        LeafletFilterDirective
+                    ],
+                    declarations: [
+                        LeafletFilterDirective
+                    ]
+                },] },
+    ];
+    /** @nocollapse */
+    LeafletFilterModule.ctorParameters = function () { return []; };
     return LeafletFilterModule;
 }());
-LeafletFilterModule.decorators = [
-    { type: _angular_core.NgModule, args: [{
-                exports: [
-                    LeafletFilterDirective
-                ],
-                declarations: [
-                    LeafletFilterDirective
-                ]
-            },] },
-];
-/** @nocollapse */
-LeafletFilterModule.ctorParameters = function () { return []; };
 
 exports.LeafletFilterModule = LeafletFilterModule;
 

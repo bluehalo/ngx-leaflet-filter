@@ -1,4 +1,3 @@
-/// <reference types="leaflet" />
 import { EventEmitter, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import * as L from 'leaflet';
 import '@asymmetrik/leaflet-filter';
